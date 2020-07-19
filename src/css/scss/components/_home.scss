@@ -1,0 +1,13 @@
+body {
+    @include set_font($color: dark_grey, $font-weight: normal);
+
+    a:link,
+    a:visited,
+    a:active {
+        color: map-get($colors, red);
+    }
+
+    a:hover {
+        color: map-get($colors, black);
+    }
+}

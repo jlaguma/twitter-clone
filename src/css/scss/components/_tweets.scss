@@ -1,0 +1,46 @@
+.tweets-list {
+    margin-left: 10px;
+    margin-right: 10px;
+    ul {
+        padding-left: 0px;
+        .tweet-block {
+            margin-bottom: 20px;
+            border: 1px solid #bfbfbf;
+            background-color: #f2f2f2;
+            box-shadow: 5px 5px 5px #aaaaaa;
+            width: auto;
+            max-width: 800px;
+            min-width: 340px;
+            padding: 10px 10px 5px 0px;
+            .tweet-image {
+                width: 60px;
+                min-width: 60px;
+                display: flex;
+                justify-content: center;
+            }
+            .tweet-details {
+                width: 800px;
+                max-width: 800px;
+                .tweet-header {
+                    padding-bottom: 5px;
+                    border-bottom: 1px solid lightgray;
+                }
+                .tweet-body {
+                    padding-top: 5px;
+                    padding-bottom: 5px;
+                    border-bottom: 1px solid lightgray;
+                }
+                .tweet-footer {
+                    padding-top: 10px;
+                    .tweet-claps {
+                        display: flex;
+                        flex: 1;
+                    }
+                    .tweet-delete {
+                        display: flex;
+                    }
+                }
+            }
+        }
+    }
+}

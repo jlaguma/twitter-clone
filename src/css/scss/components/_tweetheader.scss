@@ -1,0 +1,14 @@
+.tweet-header-component {
+    .names {
+        display: flex;
+        flex: 1;
+        .name {
+            margin-right: 20px;
+            font-weight: bold;
+        }
+        .username {
+        }
+    }
+    .date {
+    }
+}

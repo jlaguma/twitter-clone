@@ -1,0 +1,32 @@
+.header {
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: lightgray;
+
+        li {
+            float: left;
+            a {
+                display: block;
+                color: white;
+                text-align: center;
+                padding: 16px;
+                text-decoration: none;
+            }
+        }
+
+        .logo {
+            padding: 0px;
+            a {
+                padding: 0px;
+            }
+            img {
+                height: 40px;
+                padding-top: 10px;
+                padding-left: 10px;
+            }
+        }
+    }
+}

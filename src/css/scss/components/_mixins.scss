@@ -1,0 +1,42 @@
+@mixin box-shadow($args) {
+    -webkit-box-shadow: $args !important;
+    -o-box-shadow: $args !important;
+    box-shadow: $args !important;
+}
+
+@mixin text-shadow($args) {
+    -webkit-text-shadow: $args;
+    -moz-text-shadow: $args;
+    -o-text-shadow: $args;
+    text-shadow: $args;
+}
+
+@mixin border-radius($args) {
+    border-radius: $args !important;
+}
+
+@mixin transition($args...) {
+    -webkit-transition: $args;
+    -o-transition: $args;
+    transition: $args;
+}
+
+@mixin transform($args...) {
+    -webkit-transform: $args;
+    -ms-transform: $args;
+    transform: $args;
+}
+
+@mixin set_font(
+    $font-family: 'Roboto',
+    $color: black,
+    $font-size: 16px,
+    $font-weight: bold,
+    $line-height: 26px
+) {
+    font-family: $font-family, sans-serif !important;
+    color: map-get($colors, $color) !important;
+    font-size: $font-size !important;
+    font-weight: $font-weight !important;
+    line-height: $line-height !important;
+}
