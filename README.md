@@ -9,6 +9,7 @@ Jest and Enzyme were used for Unit and Integration testing.
 git clone https://github.com/jlaguma/twitter-clone twitter-clone
 cd twitter-clone
 npm install
+npm install -g json-server
 ```
 
 ## Usage
