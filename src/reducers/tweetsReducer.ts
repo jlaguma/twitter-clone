@@ -69,12 +69,15 @@ const tweetsReducer = (
             return { ...state, loading: true };
         case twitterActionTypes.CLAP_TWEET_SUCCESS:
             const payload = action.payload.data;
-            const index = state.tweets.findIndex(
-                (tweet) => tweet.id === payload.id
+            let newTweets = state.tweets.map((tweet) =>
+                tweet.id === payload.id ? { ...payload } : tweet
             );
-            let newTweets = [...state.tweets];
-            newTweets[index] = payload;
-            return { ...state, loading: false, error: '', tweets: newTweets };
+            return {
+                ...state,
+                loading: false,
+                error: '',
+                tweets: newTweets,
+            };
         case twitterActionTypes.CLAP_TWEET_ERROR:
             return { ...state, loading: false, error: action.payload.message };
         default:
