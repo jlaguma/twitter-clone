@@ -1,20 +1,21 @@
 import React, { FC, MouseEvent } from 'react';
-import { connect } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 import { withRouter } from 'react-router-dom';
 import { changeAuth } from 'actions/authActions';
-import { AuthState } from 'constants/types';
-import { RootState } from 'store';
+import { State } from 'constants/types';
 
 interface Props {
-    auth: AuthState;
-    changeAuth: any;
     history: any;
 }
 
-const LoginButton: FC<Props> = ({ auth, changeAuth, history }) => {
+const LoginButton: FC<Props> = ({ history }) => {
+    const auth = useSelector((state: State) => state.auth);
+    const dispatch = useDispatch();
+
     const handleAuth = (e: MouseEvent) => {
         e.preventDefault();
-        changeAuth(!auth.loggedIn);
+        // changeAuth(!auth.loggedIn);
+        dispatch(changeAuth(!auth.loggedIn));
         // redirect to home page at login or log out
         history.push('/');
     };
@@ -32,14 +33,12 @@ const LoginButton: FC<Props> = ({ auth, changeAuth, history }) => {
     );
 };
 
-const mapStateToProps = (state: RootState) => {
-    return { auth: state.auth };
-};
+// const mapStateToProps = (state: RootState) => {
+//     return { auth: state.auth };
+// };
 
-const mapDispatchToProps = {
-    changeAuth,
-};
+// const mapDispatchToProps = {
+//     changeAuth,
+// };
 
-export default withRouter(
-    connect(mapStateToProps, mapDispatchToProps)(LoginButton)
-);
+export default withRouter(LoginButton);

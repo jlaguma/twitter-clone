@@ -158,3 +158,14 @@ export interface ChartData {
     name: string;
     value: number;
 }
+
+/**
+ * State type
+ */
+export interface State {
+    tweets: TweetState;
+    users: UserState;
+    usersDetails: UsersDetailsState;
+    auth: AuthState;
+    notification: NotificationState;
+}
